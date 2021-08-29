@@ -1,5 +1,92 @@
-#container{
-    background-color: gray;
+#title{
+    background-color: mediumturquoise;
+}
+/*---Control Panel---*/
+#controls{
+    width: 40%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    float: left;
+    background-color: paleturquoise;
+}
+
+.control-panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: tomato;   
+}
+
+.control-panel-title{
+    font-size: 1em;
+    text-align: end;
+}
+
+#res-ctrldisp{
+    display: flex;
+    flex-direction: row;
+}
+
+#increment-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.increment-btn{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: mediumturquoise;
+    text-align: center;
+    font-weight: bold;
+}
+
+.increment-btn:hover{
+    background-color: tomato;
+    color: white;
+}
+.increment-display{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: mediumturquoise;
+    text-align: center;
+}
+
+.color-toggle{
+    width: 100px;
+    height: 100px;
+    background-color: ;
+}
+/*---Workspace---*/
+#workspace{
+    background-color: mediumturquoise;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    height: 90vh;
+}
+
+#upper-workspace{
+    height: 10vh;
+    font-family: 'Faster One', cursive;
+    font-size: 8vh;
+    font-stretch: wider;
+    text-align: center;
+    color: tomato;
+}
+
+#etch-container{
+    background-color: tomato;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,4 +94,18 @@
 
 .etch-square{
     background-color: white;
+}
+
+#reset-btn{
+    background-color: paleturquoise;
+    width: 16vw;
+    height: 4vh;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#reset-btn:hover{
+    background-color: tomato;
+    color: white;
 }

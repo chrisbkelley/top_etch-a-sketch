@@ -6,9 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>etch-a-sketch</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet"> 
     <script src="etch.js" defer></script>
   </head>
-  <body>
-    <div id='container'></div>
+  <body onload='main(1);'>
+    <div id='title'></div>
+    <div id='controls'>
+      <div id='grid-size' class='control-panel'></div>
+      <div id='grid-res' class='control-panel'>
+        <div id='grid-res-continer'>
+        <div class='control-panel-title'>Resolution</div>
+        <div id='res-ctrldisp'>
+          <div id='increment-container'>
+            <div id='res-left'>
+              <div id='res-up' class='increment-btn' onclick='incGridRes();'>+</div>
+              <div id='res-down' class='increment-btn' onclick='decGridRes();'>-</div>
+            </div>
+          </div>
+          <div id='res-right'>
+            <div id='res-display' class='increment-display'></div>
+        </div>
+      </div>
+        </div>       
+      </div>
+      <div id='grid-colors' class='control-panel'>
+        <div id='grid-bw' class='color-toggle'></div>
+        <div id='grid-shading' class='color-toggle'></div>
+        <div id='grid-color' class='color-toggle'></div>
+      </div>
+    </div>
+    <div id='workspace'>
+      <div id='upper-workspace'>Sketchy</div>
+      <div id='mid-workspace'>
+        <div id='etch-container'></div>
+      </div>  
+      <div id='lower-workspace'>
+        <button id='reset-btn' onclick='eraseGrid();'>Reset</button>
+      </div>
+    </div>
   </body>
 </html>

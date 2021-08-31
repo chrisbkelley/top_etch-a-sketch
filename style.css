@@ -1,3 +1,8 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
 #title{
     background-color: mediumturquoise;
 }
@@ -16,6 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     color: tomato;   
 }
 
@@ -46,7 +52,7 @@
 
 .increment-btn:hover{
     background-color: tomato;
-    color: white;
+    color:white;
 }
 .increment-display{
     width: 100px;
@@ -60,10 +66,20 @@
 }
 
 .color-toggle{
-    width: 100px;
-    height: 100px;
-    background-color: ;
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: mediumturquoise;
 }
+.color-toggle:hover{
+    background-color: tomato;
+    color: white;
+}
+
 /*---Workspace---*/
 #workspace{
     background-color: mediumturquoise;

@@ -1,7 +1,7 @@
 //sets width of sketch pad grid
 const gridWidth = 300;
 
-//This multiplier increases the resolution density.  
+//This multiplier increases the sketch pad resolution.  
 const resMultiplier = 16;
 
 //This number should be from 1-10.  
@@ -23,9 +23,6 @@ function makeGridCols(){
         };
 };
 
-function black(){
-
-};
 
 function makeGridSquares (){
     const cols = document.querySelectorAll('.etch-col');
@@ -101,16 +98,9 @@ function decGridRes(){
     };
 };
 
-function shadingOn(){
-    const cols = document.querySelectorAll('.etch-col');
-    const squares = document.querySelectorAll('.etch-square');
-    for (i=0; i < cols.length; i++){
-        for (j=0; j < squares.length; j++){
-            squares[i].addEventListener("mouseover", function() {
-                squares[i].style.backgroundColor = 'red';
-            });
-        };
-    };
+function displayRes(){
+    const display = document.querySelector('#res-display');
+    display.textContent = `${gridSquares}x${gridSquares}`
 };
 
 function changeListenerColors(){
@@ -128,10 +118,41 @@ function changeColor(){
     this.style.backgroundColor = selectedColor;
 };
 
-function displayRes(){
-    const display = document.querySelector('#res-display');
-    display.textContent = `${gridSquares}x${gridSquares}`
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); 
+  }
+  
+
+function randomColor(){
+    let randomColor = '';
+    let randomArr = [];
+    for (i = 0; i < 3; i++){
+        randomArr.push(getRandomInt(0,255))
+    };
+    randomColor = `rgb(${randomArr[0]},
+                        ${randomArr[1]},
+                        ${randomArr[2]})`;
+    return randomColor;
+}
+
+function grayShading(){
+    let shading = 'rgba(0,0,0,0.1)'; 
+    // do things and return a string for setSelectedColor()
+    return shading;
 };
+
+function setSelectedColor(inputValue){
+    return selectedColor = inputValue; 
+};
+
+function toggleColorMode(selColInput){
+    setSelectedColor(selColInput);
+    changeListenerColors();
+};
+
+
 
 function main(selectedGridSize){
     const container = document.getElementById('etch-container');

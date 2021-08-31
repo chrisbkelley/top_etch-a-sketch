@@ -32,9 +32,11 @@
         </div>       
       </div>
       <div id='grid-colors' class='control-panel'>
-        <div id='grid-bw' class='color-toggle'></div>
-        <div id='grid-shading' class='color-toggle'></div>
-        <div id='grid-color' class='color-toggle'></div>
+        <div id='grid-bw' class='color-toggle' onclick="toggleColorMode('black')">Black & White</div>
+        <!-- TODO: complete this feature.
+        <div id='grid-shading' class='color-toggle' onclick="toggleColorMode(grayShading())"></div>
+        -->
+        <div id='grid-color' class='color-toggle' onclick="toggleColorMode(randomColor())">Random color</div>
       </div>
     </div>
     <div id='workspace'>
